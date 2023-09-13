@@ -60,13 +60,97 @@ body{
       }
     }
 }
+.main{
+    display: flex;
+    margin: 2rem 3rem;
+    aside{
+        width: 25%;
+        flex-direction: column;
+    
+        margin-right: 25px;
+        @include bodyStyle;
+        @include boxStyle;
+
+         .course{
+           text-align: center;
+            margin: 1rem auto;
+            background-color: $primery-color;
+          
+          width: 100%;
+          height: 80px;
+          line-height: 80px;
+          border-radius: 4px;
+       
+          @include boxStyle;
+
+         
+            a{
+                @include textStyle(1rem , bold , $text-color);
+                text-decoration: none;
+               
+                transition: all 0.4s ease;
+                &:hover{
+                    color: $general-text;
+                }
+            }
+         }
+    }
+    main{
+        width: 75%;
+        flex-direction: column;
+
+       @include bodyStyle;
+       @include boxStyle;
+       
+       img{
+        margin: 1rem auto;
+        @include boxStyle;
+       }
+       h2{
+        margin-bottom: 2rem;
+        @include textStyle(3rem , bold , $general-text);
+       }
+       p{
+        
+        @include textStyle(1rem ,bold , $primery-color);
+       }
+    }
+}
+
 @include media(M){
 .header{
     .hamburger-menu{
         display: flex;
+
     }
 }
 .navbar{
     display: none;
 }
+
+.main{
+    flex-direction: column-reverse;
+    margin: 1rem;
+    main{
+        width:calc(100% - 2rem) ;
+        height: 500px;
+        margin-bottom: 20px;
+        h2{
+            font-size: 2rem;
+        }
+
+        p{
+            font-size: 0.8rem;
+
+        }
+       
+    }
+
+    aside{
+        width: calc(100% - 2rem);
+        height: 600px;
+       
+    }
 }
+}
+

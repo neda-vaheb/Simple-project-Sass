@@ -58,11 +58,101 @@ body {
   color: rgb(27, 27, 27);
 }
 
+.main {
+  display: flex;
+  margin: 2rem 3rem;
+}
+.main aside {
+  width: 25%;
+  flex-direction: column;
+  margin-right: 25px;
+  background-color: white;
+  height: 600px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 10px;
+}
+.main aside .course {
+  text-align: center;
+  margin: 1rem auto;
+  background-color: rgba(131, 125, 125, 0.808);
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 10px;
+}
+.main aside .course a {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.main aside .course a:hover {
+  color: rgb(27, 27, 27);
+}
+.main main {
+  width: 75%;
+  flex-direction: column;
+  background-color: white;
+  height: 600px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 10px;
+}
+.main main img {
+  margin: 1rem auto;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 10px;
+}
+.main main h2 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(27, 27, 27);
+}
+.main main p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgba(131, 125, 125, 0.808);
+}
+
 @media (max-width: 768px) {
   .header .hamburger-menu {
     display: flex;
   }
   .navbar {
     display: none;
+  }
+  .main {
+    flex-direction: column-reverse;
+    margin: 1rem;
+  }
+  .main main {
+    width: calc(100% - 2rem);
+    height: 500px;
+    margin-bottom: 20px;
+  }
+  .main main h2 {
+    font-size: 2rem;
+  }
+  .main main p {
+    font-size: 0.8rem;
+  }
+  .main aside {
+    width: calc(100% - 2rem);
+    height: 600px;
   }
 }/*# sourceMappingURL=stayle.css.map */
