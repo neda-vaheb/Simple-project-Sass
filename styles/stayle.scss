@@ -1,3 +1,49 @@
 @import "variable";
 @import "mixin";
 
+*{
+    @include overal;
+}
+body{
+    background-color: $bgcolor;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 3rem ;
+    background-color: $primery-color;
+  
+     
+    .logo-name{
+        @include textStyle(2rem , bold , white);
+    }
+}
+.navbar{
+    display: flex;
+    align-items: center;
+
+    img{
+        width: 60px;
+        
+    }
+    nav{
+        margin-right: 40px;
+    }
+
+    ul{
+        list-style: none;
+        display: flex;
+
+    }
+    a{
+        text-decoration: none;
+        padding: 8px;
+        transition: all 0.4s ease-in;
+      @include textStyle(1rem , bold, $text-color);
+
+      &:hover{
+        color: $general-text;
+      }
+    }
+}
