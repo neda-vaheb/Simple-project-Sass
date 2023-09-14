@@ -191,4 +191,15 @@ body {
     width: calc(100% - 2rem);
     height: 600px;
   }
+  .cards {
+    width: calc(100% - 2rem);
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
 }/*# sourceMappingURL=stayle.css.map */

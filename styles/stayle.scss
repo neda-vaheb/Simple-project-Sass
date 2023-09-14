@@ -187,5 +187,16 @@ body{
        
     }
 }
+.cards{
+    width: calc(100% - 2rem);
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+}
+}
+@include media(L){
+    .cards{
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 50px;
+    }
 }
 
