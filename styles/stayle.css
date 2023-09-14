@@ -165,6 +165,42 @@ body {
   color: rgba(131, 125, 125, 0.808);
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 3rem;
+  margin-top: 30px;
+  background-color: rgba(131, 125, 125, 0.808);
+}
+footer .summery {
+  width: 70%;
+}
+footer .summery p {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: white;
+}
+footer .links {
+  width: 30%;
+  padding: 0 5rem;
+}
+footer .links ul {
+  list-style: none;
+}
+footer .links ul a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+  transition: all 0.4s ease;
+}
+footer .links ul a:hover {
+  color: rgb(27, 27, 27);
+}
+
 @media (max-width: 768px) {
   .header .hamburger-menu {
     display: flex;
@@ -195,6 +231,17 @@ body {
     width: calc(100% - 2rem);
     grid-template-columns: 1fr;
     margin: 0 auto;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer .summery {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  footer .links {
+    width: 100%;
+    padding: 0;
   }
 }
 @media (min-width: 768px) and (max-width: 1200px) {

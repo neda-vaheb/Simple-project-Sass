@@ -151,6 +151,44 @@ body{
     }
 }
 
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 3rem;
+ 
+    margin-top: 30px;
+    background-color: $primery-color;
+    
+    .summery{
+        width: 70%;
+        p{
+            text-align: left;
+            @include textStyle(1.2rem , 100 , $text-color);
+        }
+       
+    }
+    .links{
+        width: 30%;
+        padding: 0 5rem;
+        ul{
+            list-style: none;
+            
+            a{
+                display: inline-block;
+                text-decoration: none;
+                @include textStyle(1.2rem , bold , $text-color);
+                margin-bottom: 10px;
+                transition: all 0.4s ease;
+                &:hover{
+                    color: $general-text;
+                }
+               
+            }
+        }
+
+    }
+}
+
 
 @include media(M){
 .header{
@@ -191,6 +229,17 @@ body{
     width: calc(100% - 2rem);
     grid-template-columns: 1fr;
     margin: 0 auto;
+}
+footer{
+    flex-direction: column;
+    .summery{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .links{
+        width: 100%;
+        padding: 0;
+    }
 }
 }
 @include media(L){
