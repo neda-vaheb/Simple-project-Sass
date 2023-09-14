@@ -117,6 +117,41 @@ body{
     }
 }
 
+.cards{
+    width: calc(100% - 6rem);
+    display: grid;
+    gap: 30px;
+  margin: 0 auto;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    padding: 20px 0;
+    
+   
+
+}
+.card{
+    background-color: $text-color;
+   
+    text-align: center;
+    @include boxStyle;
+   
+    .card-content{
+        text-align: left;
+        line-height: 1.5rem;
+        padding: 15px;
+        p{
+            margin: 10px 0;
+            @include textStyle(1rem , 100 , $general-text);
+        }
+        span{
+            display: inline-block;
+            margin: 10px 0;
+            @include textStyle(0.8rem , bold , $primery-color);
+        }
+    }
+}
+
+
 @include media(M){
 .header{
     .hamburger-menu{
